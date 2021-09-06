@@ -1,0 +1,117 @@
+body {
+  position: relative;
+  background: #F4F5F8 !important; /* TODO: remove important */
+  font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3B4043;
+  overflow-wrap: break-word;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+* {
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+  -webkit-touch-callout:none;
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+a, a:link, a:visited, a:hover, a:active{
+  color: inherit;
+  text-decoration: none;
+}
+select,
+options,
+input[type=text],
+input[type=password],
+input[type=radio],
+input[type=checkbox],
+input[type=email],
+textarea {
+  font-family: "游ゴシック", YuGothic, "メイリオ", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  -webkit-user-select: auto;
+  border: none;
+  border-radius: 0;
+  padding: 0 10px;
+  box-sizing: border-box;
+  outline: none;
+  appearance: none;
+}
+select::placeholder,
+options::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=radio]::placeholder,
+input[type=checkbox]::placeholder,
+input[type=email]::placeholder {
+  color: #B1B1B1;
+}
+input::-webkit-input-placeholder { padding-top: 0.2em; }
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+#app {
+  padding-top: 50px;
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#app.is-has-not-headers.is-has-not-footer .main {
+  padding: 0;
+}
+
+#app.is-has-maintenance-info {
+  padding-top: 110px;
+}
+
+.main {
+  min-height: calc(100vh - 180px);
+  position: relative;
+  padding: 30px 48px;
+}
+
+.main.chat-screen {
+  padding-bottom: 0;
+}
+
+.main > div {
+  max-width: 1184px;
+  margin: 0 auto;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
