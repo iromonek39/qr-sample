@@ -2,6 +2,7 @@
   <div id="app">
     <!-- <Header/> -->
     <div class="main">
+      <ParamsEncodeDecode/>
       <QR/>
       <QRGenerator/>
       <!-- <keep-alive>
@@ -20,6 +21,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import QR from '@/components/QR'
 import QRGenerator from '@/components/QRGenerator'
+import ParamsEncodeDecode from '@/components/ParamsEncodeDecode'
 
 export default {
   name: 'App',
@@ -37,7 +39,8 @@ export default {
     Header,
     Footer,
     QR,
-    QRGenerator
+    QRGenerator,
+    ParamsEncodeDecode
   },
   methods: {
     beforeLeave (element) {

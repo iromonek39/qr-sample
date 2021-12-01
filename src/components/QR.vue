@@ -23,6 +23,7 @@
     <div>
       <canvas id="mycanvas"/>
     </div>
+
   </div>
 </template>
 
@@ -35,7 +36,13 @@ export default {
   data () {
     return {
       canvas: null,
-      ctx: null
+      ctx: null,
+      name: 'テスト',
+      address: 'asg23q4ytq3hfdasa',
+      key: 'w42jywm932u4ym',
+      paramName: '',
+      paramAddress: '',
+      paramKey: ''
     }
   },
   components: {
@@ -128,11 +135,36 @@ export default {
       } else {
         alert('No QR Code found.')
       }
+    },
+
+    setParams () {
+      this.$router.push({
+        path: '/',
+        query: {
+          name: encodeURI(this.name),
+          address: encodeURI(this.address),
+          key: encodeURI(this.key)
+        }
+      }, () => {})
+
+      this.paramName = decodeURI(this.$route.query.name)
+      this.paramAddress = decodeURI(this.$route.query.address)
+      this.paramKey = decodeURI(this.$route.query.key)
     }
   },
   mounted () {
     this.canvas = document.getElementById('mycanvas')
     this.ctx = this.canvas.getContext('2d')
+
+    if (this.$route.query.name && this.$route.query.address && this.$route.query.key) {
+      this.paramName = decodeURI(this.$route.query.name)
+      this.paramAddress = decodeURI(this.$route.query.address)
+      this.paramKey = decodeURI(this.$route.query.key)
+    } else {
+      this.paramName = ''
+      this.paramAddress = ''
+      this.paramKey = ''
+    }
   },
   created () {
   }
