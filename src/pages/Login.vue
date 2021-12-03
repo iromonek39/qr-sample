@@ -1,6 +1,7 @@
 <template>
   <div class="login">
     <p>ログイン</p>
+    <p>テスト</p>
   </div>
 </template>
 
